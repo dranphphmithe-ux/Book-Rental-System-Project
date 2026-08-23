@@ -1,0 +1,85 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPxJRPFcs72YTSysI2RWAzY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dranphphmithe-ux/Book-Rental-System-Project/blob/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87_%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87_Untitled1.ipynb%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "all_demo_orders = [order_a] + completed_orders"
+      ],
+      "metadata": {
+        "id": "2MkcTZx71GCI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "summary_rows = [\n",
+        "    {\n",
+        "        \"order_id\": o.order_id,\n",
+        "        \"customer_name\": o.customer_name,\n",
+        "        \"book_titles\": \", \".join(o.book_titles),\n",
+        "        \"total_books\": len(o.book_titles),\n",
+        "        \"days_rented\": o.days_rented,\n",
+        "        \"rental_price\": o.calculate_price(),\n",
+        "        \"penalty_fee\": o.penalty_fee,\n",
+        "        \"points_earned\": o.points_earned,\n",
+        "        \"status\": o.status\n",
+        "    }\n",
+        "    for o in orders\n",
+        "]\n",
+        "\n",
+        "df = pd.DataFrame(summary_rows)"
+      ],
+      "metadata": {
+        "id": "e7EgMAJH1G1a",
+        "outputId": "d89bed2e-907e-4dcb-ca60-a2eb137570d5",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 207
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'orders' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_600/1223914387.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     12\u001b[0m         \u001b[0;34m\"status\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mo\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstatus\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     13\u001b[0m     }\n\u001b[0;32m---> 14\u001b[0;31m     \u001b[0;32mfor\u001b[0m \u001b[0mo\u001b[0m \u001b[0;32min\u001b[0m \u001b[0morders\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     15\u001b[0m ]\n\u001b[1;32m     16\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'orders' is not defined"
+          ]
+        }
+      ]
+    }
+  ]
+}
