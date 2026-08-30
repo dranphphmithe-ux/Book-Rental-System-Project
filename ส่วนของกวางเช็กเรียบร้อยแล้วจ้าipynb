@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOXDgoNuIcMF+S/sk2gmPzw",
+      "authorship_tag": "ABX9TyPDxDTY9CDUMH8WBX3yaIXl",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -37,13 +37,17 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": 2,
       "metadata": {
         "id": "9UXAkv9lZtKv"
       },
       "outputs": [],
       "source": [
         "#ของกวาง\n",
+        "import csv\n",
+        "import io\n",
+        "import ssl\n",
+        "from urllib.request import Request, urlopen\n",
         "# ==================================================\n",
         "# 1. Class Book (โครงสร้างข้อมูลหนังสือ)\n",
         "# ==================================================\n",
